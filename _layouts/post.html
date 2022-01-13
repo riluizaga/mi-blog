@@ -1,0 +1,372 @@
+---
+---
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+    :root{
+        --color-1: #fff;
+        /*--color-2: #f8f8f8;*/
+        --color-2: #fff;
+        --bg-black-900: #000000;
+        --bg-black-100: #dddddd;
+        /*--bg-black-50:#eff0f4;*/
+        --bg-black-50: #f8f8f8;
+        --text-black-900: #000000;
+        --text-black-700: #555555;
+        --text-black-600: #666666;
+        --text-black-300: #bbbbbb;
+        --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+        --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+        --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+        --skin-color: #0D0259;
+    }
+    p, h1, h2, h3, h4, h5, h6 {
+        font-family: 'Raleway', sans-serif;
+        line-height: 26px;
+        margin-bottom: 15px;
+        color: var(--text-black-600);
+    }
+    body{
+        margin: auto;
+        font-size: 16px;
+        /*line-height: 1.5;*/
+        overflow-x: hidden;
+        /*background-color: var(--bg-black-50);*/
+        /*background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);*/
+    }
+    *:not(i) :not(code){
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+    }
+    :before, :after{
+        box-sizing: border-box;
+    }
+    a{
+        color: #000000;
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+    }
+    ul li{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+    }
+    .container{
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .outer-shadow{
+    box-shadow: var(--outer-shadow);
+}
+    @media screen and (min-width: 992px){
+        .container{
+            width: 88vw;
+        }
+    }
+    @media screen and (min-width: 1200px){
+        .container{
+            width: 85vw;
+        }
+    }
+    /*-------------------
+    navbar
+    -------------------*/
+    .navbar{
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        background-color: var(--color-2);
+        width: 100%;
+    }
+
+    .brand-and-toggler{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+    .navbar-brand{
+        text-transform: uppercase;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .navbar-toggler{
+        border: none;
+        font-size: 1.7rem;
+        background: none;
+        color: var(--text-black-300);
+        cursor: pointer;
+        outline: none;
+        transition: var(--transition);
+    }
+    .navbar-toggler:hover{
+        opacity: 0.8;
+    }
+    .navbar-collapse {
+        position: relative;
+        width: 100%;
+        height: 0;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-item,
+    .nav-ilk {
+        list-style: none;
+        text-align: center;
+        padding: 0.5rem 0.8rem;
+    }
+    .nav-link,
+    .nav-lk {
+        font-size: 1.2rem;
+        text-align: center;
+    }  
+    .nav-link::before {
+        content: attr(data-text);
+        position: absolute;
+        top: -185px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        z-index: -1;
+        opacity: 0;
+        line-height: 100vh;
+        font-weight: 600;
+        font-size: 4em;
+        color: rgba(101, 149, 191, 0.4);
+        transition: 1s;
+        letter-spacing: 10px;
+    }
+    .nav-item:hover .nav-link::before {
+        opacity: 1;
+    }
+    .showNav{
+        height: 50vh;
+    }
+    .nav-active{
+        color: var(--skin-color);
+    }
+    .btn{
+    background: linear-gradient(160deg, var(--skin-color) 30%, #6ec1e4);
+    border-radius: 15px;
+    color: white;
+    padding: 3px 5px;
+    }
+    header {
+        line-height: 1.5;
+    }
+    body aside h3 {
+        color: var(--skin-color);
+    }
+
+    blockquote {
+        background: #8dc8e870;
+        border-left: 10px solid #00263e;
+        margin: 1.5em 10px;
+        padding: 1.5em 10px;
+        font-style: normal;
+    }
+    blockquote p {
+        color: #232c39;
+    }
+    main li {
+        font-family: 'Raleway', sans-serif;
+        line-height: 26px;
+        color: var(--text-black-600);
+    }
+    main a {
+        font-family: 'Raleway', sans-serif;
+        color: var(--text-black-600);
+        text-decoration: underline;
+    }
+    main {
+        padding: 70px 35px;
+        float: left;
+        width: 70%;
+        min-height: 300px;
+    }
+    aside {
+        position: fixed;
+        right: 0;
+        padding: 70px 0;
+        float: right;
+        width: 25%;
+        min-height: 300px;
+    }
+    pre.highlight {
+        padding: 20px;
+        border-radius: 7px;
+        background: #d3d3d35c;
+        overflow: auto;
+        white-space: pre;
+        color: #00263e
+    }
+    footer {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    /* Media Queries */
+    @media screen and (min-width: 992px){
+        .navbar-toggler{
+            display: none;
+        }
+        .navbar .container{
+        display: grid;
+        grid-template-columns: 20% 80%;  
+        }
+        .navbar-nav{
+            display: flex;
+            flex-direction: row;
+        }
+        .navbar-collapse{
+            overflow: hidden;
+            height: 100%;
+            place-items: center end;
+        }
+        .navbar-collapse ul{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .nav-link,
+        .nav-lk{
+        font-size: 1rem;
+        transition: var(--transition);
+        }
+        .nav-link:hover{
+        color: var(--skin-color);
+        }
+        .nav-item,
+        .nav-ilk{
+        text-align: center;
+        padding: 0.6rem;
+        position: relative;
+        }
+        .nav-item::after{
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+        width: 0;
+        height: 2px;
+        background: var(--skin-color);
+        transition: all 0.4s ease;
+        }
+        .nav-item:hover::after{
+        width: 60px;
+        }
+        .nav-link::before {
+        content: "";
+        }
+    }
+</style>
+
+<body>
+    <!-- navbar section start -->
+    <header>
+        <nav class="navbar outer-shadow">
+            <div class="container">
+                <div class="brand-and-toggler">
+                    <a href="https://riluizaga.github.io/portfolio/" class="navbar-brand">Portfolio</a>
+                    <button type="button" class="navbar-toggler" id="navbar-toggler">
+                        <span>
+                            <i class="fas fa-bars"></i>
+                        </span>
+                    </button>
+                </div>
+            
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav">
+                        <!-- <li class="nav-item"><a href="https://riluizaga.github.io/portfolio/#home" class="nav-link nav-active" data-text="Home">Home</a></li> -->
+                        <li class="nav-item"><a href="https://riluizaga.github.io/portfolio/#about" class="nav-link" data-text="About">Sobre mi</a></li>
+                        <li class="nav-item"><a href="https://riluizaga.github.io/portfolio/#skill" class="nav-link" data-text="Skills">Conocimientos</a></li>
+                        <li class="nav-item"><a href="https://riluizaga.github.io/portfolio/#project" class="nav-link" data-text="Projects">Blog</a></li>
+                        <li class="nav-ilk"><a href="https://www.linkedin.com/in/riluizaga" class="nav-lk btn" data-text="LinkedIn">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end section navbar-->
+    </header>
+    <main>
+        {{content}}
+        <footer>
+            <p>Copyright &copy; 2019 Luizaga Ricardo</p>
+        </footer>
+    </main>
+    <aside>
+        <h3>Posts Recientes</h3>
+        {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </aside>
+</body>
+<script>
+    const navBtn = document.querySelector('#navbar-toggler');
+    const navDiv = document.querySelector('.navbar-collapse');
+
+    navBtn.addEventListener('click', ()=>{
+        navDiv.classList.toggle('showNav');
+    });
+
+    /* ==================== SCROLL SECTIONS ACTIVE LINK ==================== */
+    const sections = document.querySelectorAll('section[id]')
+
+    function scrollActive(){
+        sections.forEach(current =>{
+            const sectionHeight = current.offsetHeight
+            const sectionTop = current.offsetTop - 50;
+            sectionId = current.getAttribute('id')
+
+            if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+                /*console.log(sectionId)*/
+                document.querySelector('.navbar-collapse a[href*=' + sectionId + ']').classList.add('nav-active')
+                /*console.log('.navbar-collapse a[href*=' + sectionId + ']')*/
+            }else{
+                document.querySelector('.navbar-collapse a[href*=' + sectionId + ']').classList.remove('nav-active')
+            } 
+        })
+    }
+    window.addEventListener('scroll', scrollActive)
+
+    /* ==== REMOVE MENU ====*/
+    const navItem = document.querySelectorAll('.nav-item')
+
+    function linkAction() {
+        navDiv.classList.remove('showNav')
+        navItem.forEach(n => n.classList.remove('nav-active'));
+        this.classList.add('nav-active');
+        console.log(this)
+    }
+    navItem.forEach(n => n.addEventListener('click', linkAction))
+
+    // stopping animation and transition during window resizing
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        document.body.classList.add('resize-animation-stopper');
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            document.body.classList.remove('resize-animation-stopper');
+        }, 400);
+    });
+</script>
