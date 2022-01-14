@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Mi Primer Post"
 date:   2022-01-09 23:04:13 -0300
 categories: jekyll update
 ---
@@ -48,7 +48,7 @@ plot_sin()
 ```
 
 
-
+![png](/images/output_9_0.png)
 
 
 ### Sine wave with an amplitude of 20
@@ -59,7 +59,7 @@ plot_sin(amplitude=20)
 ```
 
 
-
+![png](/images/output_11_0.png)
 
 
 All of the above was written and ran within a Jupyter Notebook and automatically formatted for this blogpost.
