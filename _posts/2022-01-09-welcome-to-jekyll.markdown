@@ -48,7 +48,7 @@ plot_sin()
 ```
 
 
-
+![](/img/output_9_0.png)
 
 
 ### Sine wave with an amplitude of 20
@@ -59,7 +59,7 @@ plot_sin(amplitude=20)
 ```
 
 
-
+![](/img/output_11_0.png)
 
 
 All of the above was written and ran within a Jupyter Notebook and automatically formatted for this blogpost.
